@@ -450,6 +450,7 @@ body.page-leaving { opacity: 0; transform: translateY(-8px); }
     .officials-grid {
       display: grid; gap: 5rem; margin-top: 4rem;
       grid-template-columns: repeat(2,minmax(0, 1fr));
+      gap: 16px;
     }
     @media (min-width: 768px) { .officials-grid { grid-template-columns: repeat(4, 1fr); } }
     .official-card { text-align: center; }
