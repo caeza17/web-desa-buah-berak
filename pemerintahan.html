@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pemerintahan Desa – Desa Buah Berak</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-pemerintahan">
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="header">
+    <div class="container inner">
+      <div class="logo-area">
+        <img src="img/LogoDesaBuahBerak.png" alt="Logo Desa Buah Berak" />
+        <div class="logo-text">
+          <div class="kecamatan">Pemerintah Desa</div>
+          <div class="desa-name">BUAH BERAK</div>
+          <div class="sub">Kec. Kalianda &middot; Kab. Lampung Selatan</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html#beranda">Beranda</a>
+        <a href="profil.html">Profil Desa</a>
+        <a href="pemerintahan.html" class="active">Pemerintahan</a>
+        <a href="berita.html">Berita</a>
+        <a href="layanan.html">Layanan</a>
+        <a href="index.html#kontak">Kontak</a>
+        <a href="layanan.html" class="btn-layanan">Layanan Online</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html#beranda" onclick="closeMobileNav()">Beranda</a>
+      <a href="profil.html" onclick="closeMobileNav()">Profil Desa</a>
+      <a href="pemerintahan.html" onclick="closeMobileNav()">Pemerintahan</a>
+      <a href="berita.html" onclick="closeMobileNav()">Berita</a>
+      <a href="layanan.html" onclick="closeMobileNav()">Layanan</a>
+      <a href="index.html#kontak" onclick="closeMobileNav()">Kontak</a>
+    </nav>
+  </header>
+
+  <!-- ═══ PAGE BANNER ═══ -->
+  <div class="page-banner">
+    <div class="container">
+      <div class="section-label left" style="margin-bottom:.5rem;"><span class="bar"></span> Struktur Organisasi</div>
+      <h1>Pemerintahan Desa</h1>
+      <div class="breadcrumb"><a href="index.html">Beranda</a> &nbsp;/&nbsp; Pemerintahan</div>
+    </div>
+  </div>
+
+<section class="pemerintahan" id="pemerintahan">
+    <div class="container">
+      <div class="section-label">Struktur Organisasi</div>
+      <h2 class="section-title">Aparatur Pemerintah Desa</h2>
+      <p class="sub">Berikut adalah jajaran aparatur yang bertugas melayani masyarakat Desa Buah Berak.</p>
+
+      <div class="official-lead">
+        <div class="official-card">
+          <div class="official-photo">
+            <img src="img/kepala-desa.jpeg" alt="Kepala Desa" />
+          </div>
+          <div class="official-name">Umar Sofriandi, S.E.</div>
+          <div class="official-role">Kepala Desa</div>
+        </div>
+        
+        <div class="officials-lead">
+        <div class="official-card">
+          <div class="official-photo">
+            <img src="img/sekretaris-desa.jpeg" alt="Sekretaris Desa" />
+          </div>
+          <div class="official-name">Adi Cahyadi</div>
+          <div class="official-role">Sekretaris Desa</div>
+        </div>
+        
+        <div class="officials-grid">
+        <div class="official-card">
+          <div class="official-photo">
+            <img src="img/kaur-keuangan.jpeg" alt="Kaur Keuangan" />
+          </div>
+          <div class="official-name">Hendra Agustama S.H</div>
+          <div class="official-role">Kaur Keuangan</div>
+        </div>
+
+        <div class="official-card">
+          <div class="official-photo">
+            <img src="img/kaur-perencanaan.jpeg" alt="Kaur Perencanaan" />
+          </div>
+          <div class="official-name">Insaan Arafi</div>
+          <div class="official-role">Kaur Perencanaan</div>
+        </div>
+
+          <div class="official-card">
+          <div class="official-photo">
+            <img src="img/kasi-kesejahteraan.jpeg" alt="Kasi Kesejahteraan"/>
+          </div>
+          <div class="official-name">Agustian Maulana</div>
+          <div class="official-role">Kasi Kesejahteraan</div>
+        </div>
+
+        <div class="official-card">
+          <div class="official-photo">
+            <img src="img/kasi-pemerintahan.jpeg" alt="Kasi Pemerintahan" />
+          </div>
+          <div class="official-name">Siska Oktavia</div>
+          <div class="official-role">Kasi Pemerintahan</div>
+        </div>
+
+        <div class="official-card">
+          <div class="official-photo">
+            <img src="img/kasi-pelayanan.jpeg" alt="Kasi Pelayanan" />
+          </div>
+          <div class="official-name">Siti Maryati</div>
+          <div class="official-role">Kasi Pelayanan</div>
+        </div>
+
+          <div class="official-card">
+          <div class="official-photo">
+            <img src="img/kaur-umum.jpeg" alt="Kaur Umum" />
+          </div>
+          <div class="official-name">Mutiara Tungga</div>
+          <div class="official-role">Kaur Umum</div>
+        </div>
+
+         <div class="official-card">
+          <div class="official-photo">
+            <img src="img/operator.jpeg" alt="Operator" />
+          </div>
+          <div class="official-name">Kholida Wati</div>
+          <div class="official-role">Operator</div>
+        </div>
+
+        <div class="official-card">
+          <div class="official-photo">
+            <img src="img/dusun-1.jpeg" alt="Kepala Dusun 1" />
+          </div>
+          <div class="official-name">Sobri</div>
+          <div class="official-role">Kepala Dusun 1</div>
+        </div>
+
+        <div class="official-card">
+          <div class="official-photo">
+            <img src="img/dusun-2.jpeg" alt="Kepala Dusun 2" />
+          </div>
+          <div class="official-name">Rahendra Abdillah</div>
+          <div class="official-role">Kepala Dusun 2</div>
+        </div>
+
+        <div class="official-card">
+          <div class="official-photo">
+            <img src="img/dusun-3.jpeg" alt="Kepala Dusun 3" />
+          </div>
+          <div class="official-name">Maman Sukiman</div>
+          <div class="official-role">Kepala Dusun 3</div>
+        </div>
+
+        <div class="official-card">
+          <div class="official-photo">
+            <img src="img/dusun-4.jpeg" alt="Kepala Dusun 4" />
+          </div>
+          <div class="official-name">Saiful Bahri</div>
+          <div class="official-role">Kepala Dusun 4</div>
+        </div>
+
+        <div class="official-card">
+          <div class="official-photo">
+            <img src="img/rt-1.jpeg" alt="Ketua RT 1" />
+          </div>
+          <div class="official-name">Tarmizi</div>
+          <div class="official-role">Ketua RT 1</div>
+        </div>
+
+        <div class="official-card">
+          <div class="official-photo">
+            <img src="img/rt-2.jpeg" alt="Ketua RT 2" />
+          </div>
+          <div class="official-name">Yusroni</div>
+          <div class="official-role">Ketua RT 2</div>
+        </div>
+
+        <div class="official-card">
+          <div class="official-photo">
+            <img src="img/rt-3.jpeg" alt="Ketua RT 3" />
+          </div>
+          <div class="official-name">Syaherman</div>
+          <div class="official-role">Ketua RT 3</div>
+        </div>
+
+                <div class="official-card">
+          <div class="official-photo">
+            <img src="img/rt-4.jpeg" alt="Ketua RT 4" />
+          </div>
+          <div class="official-name">Khoirul</div>
+          <div class="official-role">Ketua RT 4</div>
+        </div>
+
+                <div class="official-card">
+          <div class="official-photo">
+            <img src="img/rt-5.jpeg" alt="Ketua RT 5" />
+          </div>
+          <div class="official-name">Asyria</div>
+          <div class="official-role">Ketua RT 5</div>
+        </div>
+
+                <div class="official-card">
+          <div class="official-photo">
+            <img src="img/rt-6.jpeg" alt="Ketua RT 6" />
+          </div>
+          <div class="official-name">Astari</div>
+          <div class="official-role">Ketua RT 6</div>
+        </div>
+
+                <div class="official-card">
+          <div class="official-photo">
+            <img src="img/rt7.jpeg" alt="Ketua RT 7" />
+          </div>
+          <div class="official-name">Rasmin</div>
+          <div class="official-role">Ketua RT 7</div>
+        </div>
+
+                <div class="official-card">
+          <div class="official-photo">
+            <img src="img/rt-8.jpeg" alt="Ketua RT 8" />
+          </div>
+          <div class="official-name">Pungut</div>
+          <div class="official-role">Ketua RT 8</div>
+        </div>
+
+                <div class="official-card">
+          <div class="official-photo">
+            <img src="img/bendahara-barang.jpeg" alt="Bendahara Barang" />
+          </div>
+          <div class="official-name">Herwan</div>
+          <div class="official-role">Bendahara Barang</div>
+        </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+<!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div>
+          <div class="footer-brand">
+            <img src="img/LogoDesaBuahBerak.png" alt="Logo Desa Buah Berak" />
+            <div>
+              <div class="footer-brand-name">Desa Buah Berak</div>
+              <div class="footer-brand-sub">Website Resmi Pemerintah Desa</div>
+            </div>
+          </div>
+          <p class="footer-desc">Melayani masyarakat dengan sepenuh hati demi terwujudnya Desa Buah Berak yang mandiri, sejahtera, dan berbudaya.</p>
+        </div>
+        <!-- Tautan cepat -->
+        <div>
+          <div class="footer-heading">Tautan Cepat</div>
+          <ul class="footer-links">
+            <li><a href="index.html#beranda"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg> Beranda</a></li>
+            <li><a href="profil.html"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg> Profil Desa</a></li>
+            <li><a href="pemerintahan.html"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg> Pemerintahan</a></li>
+            <li><a href="berita.html"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg> Berita</a></li>
+            <li><a href="layanan.html"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg> Layanan</a></li>
+            <li><a href="index.html#kontak"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg> Kontak</a></li>
+          </ul>
+        </div>
+        <!-- Tautan terkait -->
+        <div>
+          <div class="footer-heading">Tautan Terkait</div>
+          <ul class="footer-links">
+            <li><a href="#"><svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Kab. Lampung Selatan</a></li>
+            <li><a href="#"><svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Kec. Kalianda</a></li>
+            <li><a href="#"><svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Disdukcapil</a></li>
+            <li><a href="#"><svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> BPJS Kesehatan</a></li>
+            <li><a href="#"><svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Puskesmas Kalianda</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Pemerintah Desa Buah Berak. Hak Cipta Dilindungi.</span>
+        <span>Dikelola oleh Tim IT Desa Buah Berak</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
