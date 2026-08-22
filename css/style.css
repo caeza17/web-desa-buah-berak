@@ -450,22 +450,19 @@ body.page-leaving { opacity: 0; transform: translateY(-8px); }
     .officials-grid {
       display: grid; gap: 5rem; margin-top: 4rem;
       grid-template-columns: repeat(2,minmax(0, 1fr));
-      gap: 16px;
+    
     }
     @media (min-width: 768px) { .officials-grid { grid-template-columns: repeat(4, 1fr); } }
     .official-card { text-align: center; }
-    
     .official-photo {
-  width: clamp(110px, 38vw, 200px);  
-  height: clamp(110px, 38vw, 200px);  
-  border-radius: 50%;
-  overflow: hidden; margin: 0 auto 1rem;
-  border: 3px solid var(--gold); background: var(--muted);
+      width: 200px; height: 200px; border-radius: 50%;
+      overflow: hidden; margin: 0 auto 1rem;
+      border: 3px solid var(--gold); background: var(--muted);
     }
-  .official-photo img {
-  width: 100%; height: 100%; object-fit: cover; 
+    .official-photo img {
+      width: 100%; height: 130%; object-fit: cover;
+      transition: transform .3s;
     }
-
     .official-card:hover .official-photo img { transform: scale(1.06); }
     .official-name { font-weight: 700; color: #000000; font-size: .9rem; line-height: 1.3; }
     .official-role { color: var(--gold); font-size: .78rem; font-weight: 600; margin-top: .25rem; }
