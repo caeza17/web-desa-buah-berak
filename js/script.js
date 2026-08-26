@@ -82,3 +82,150 @@ sections.forEach(s => observer.observe(s));
         e.target.reset();
       }, 3000);
     }
+
+    // ─── Pop-up Informasi Aparatur Desa ───
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.official-card');
+  if (!cards.length) return;
+
+  const popover = document.createElement('div');
+  popover.className = 'official-popover pop-top';
+  popover.id = 'officialPopover';
+  popover.setAttribute('role', 'dialog');
+  popover.setAttribute('aria-modal', 'false');
+  popover.innerHTML = `
+    <div class="popover-header">
+      <img class="popover-avatar" id="popPhoto" src="" alt="">
+      <div class="pop-title-wrap">
+        <span class="pop-name" id="popName">-</span>
+        <span class="pop-role" id="popRole">-</span>
+      </div>
+      <button class="popover-close" id="popClose" aria-label="Tutup">&times;</button>
+    </div>
+    <div class="popover-body">
+      <div class="popover-section-title">Informasi Aparatur</div>
+      <div class="pop-info-list">
+        <div class="pop-info-item"><span class="pop-label">Nik</span><span class="pop-val" id="popNik">-</span></div>
+        <div class="pop-info-item"><span class="pop-label">Pendidikan</span><span class="pop-val" id="popEdu">-</span></div>
+        <div class="pop-info-item"><span class="pop-label">Email</span><span class="pop-val" id="popEmail">-</span></div>
+        <div class="pop-info-item"><span class="pop-label">Masa Jabatan</span><span class="pop-val" id="popPeriod">-</span></div>
+        <div class="pop-info-item"><span class="pop-label">Alamat</span><span class="pop-val" id="popAddress">-</span></div>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(popover);
+
+  const $ = (id) => document.getElementById(id);
+  const popPhoto = $('popPhoto');
+  const popName = $('popName');
+  const popRole = $('popRole');
+  const popNik = $('popNik');
+  const popEdu = $('popEdu');
+  const popEmail = $('popEmail');
+  const popPeriod = $('popPeriod');
+  const popAddress = $('popAddress');
+  const popClose = $('popClose');
+
+  let activeCard = null;
+
+  function value(card, key, fallback = 'Belum tersedia') {
+    return card.getAttribute(key) || fallback;
+  }
+
+  function closePopover() {
+    popover.classList.remove('active');
+    popover.setAttribute('aria-hidden', 'true');
+    if (activeCard) activeCard.setAttribute('aria-expanded', 'false');
+    activeCard = null;
+  }
+
+  function positionPopover(card) {
+    const photo = card.querySelector('.official-photo') || card;
+    const rect = photo.getBoundingClientRect();
+    const isMobile = window.innerWidth <= 480;
+
+    if (isMobile) {
+      popover.style.left = '12px';
+      popover.style.top = '50%';
+      return;
+    }
+
+    const width = Math.min(360, window.innerWidth - 24);
+    const gap = 14;
+    let left = rect.left + rect.width / 2 - width / 2;
+    left = Math.max(12, Math.min(left, window.innerWidth - width - 12));
+
+    const popHeight = popover.offsetHeight || 300;
+    let top = rect.top + window.scrollY - popHeight - gap;
+
+    if (rect.top - popHeight - gap < 12) {
+      top = rect.bottom + window.scrollY + gap;
+      popover.classList.remove('pop-top');
+      popover.classList.add('pop-bottom');
+    } else {
+      popover.classList.remove('pop-bottom');
+      popover.classList.add('pop-top');
+    }
+
+    popover.style.width = `${width}px`;
+    popover.style.left = `${left}px`;
+    popover.style.top = `${top}px`;
+  }
+
+  function openPopover(card) {
+    if (activeCard === card && popover.classList.contains('active')) {
+      closePopover();
+      return;
+    }
+
+    activeCard = card;
+    cards.forEach(c => c.setAttribute('aria-expanded', 'false'));
+    card.setAttribute('aria-expanded', 'true');
+
+    const img = card.querySelector('.official-photo img');
+    popPhoto.src = img ? img.getAttribute('src') : '';
+    popPhoto.alt = img ? img.getAttribute('alt') : value(card, 'data-nama', 'Aparatur Desa');
+    popName.textContent = value(card, 'data-nama', card.querySelector('.official-name')?.textContent.trim());
+    popRole.textContent = value(card, 'data-jabatan', card.querySelector('.official-role')?.textContent.trim());
+    popNik.textContent = value(card, 'data-nik');
+    popEdu.textContent = value(card, 'data-pendidikan');
+    popEmail.textContent = value(card, 'data-email');
+    popPeriod.textContent = value(card, 'data-periode');
+    popAddress.textContent = value(card, 'data-alamat');
+
+    popover.classList.add('active');
+    popover.setAttribute('aria-hidden', 'false');
+    requestAnimationFrame(() => positionPopover(card));
+  }
+
+  cards.forEach(card => {
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('role', 'button');
+    card.setAttribute('aria-expanded', 'false');
+    card.addEventListener('click', e => {
+      e.stopPropagation();
+      openPopover(card);
+    });
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openPopover(card);
+      }
+    });
+  });
+
+  popClose.addEventListener('click', e => {
+    e.stopPropagation();
+    closePopover();
+  });
+
+  document.addEventListener('click', e => {
+    if (!popover.contains(e.target) && !e.target.closest('.official-card')) closePopover();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closePopover();
+  });
+
+  window.addEventListener('resize', closePopover);
+});

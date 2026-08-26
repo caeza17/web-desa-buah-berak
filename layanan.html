@@ -28,9 +28,11 @@
         <a href="profil.html">Profil Desa</a>
         <a href="pemerintahan.html">Pemerintahan</a>
         <a href="berita.html">Berita</a>
+        <a href="umkm.html">UMKM</a>
+        <a href="wisata.html">Wisata</a>
         <a href="layanan.html" class="active">Layanan</a>
+        <a href="pengaduan.html">Pengaduan</a>
         <a href="index.html#kontak">Kontak</a>
-        <a href="layanan.html" class="btn-layanan">Layanan Online</a>
       </nav>
 
       <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -43,6 +45,8 @@
       <a href="profil.html" onclick="closeMobileNav()">Profil Desa</a>
       <a href="pemerintahan.html" onclick="closeMobileNav()">Pemerintahan</a>
       <a href="berita.html" onclick="closeMobileNav()">Berita</a>
+      <a href="umkm.html" onclick="closeMobileNav()">UMKM</a>
+      <a href="wisata.html" onclick="closeMobileNav()">Wisata</a>
       <a href="layanan.html" onclick="closeMobileNav()">Layanan</a>
       <a href="index.html#kontak" onclick="closeMobileNav()">Kontak</a>
     </nav>
@@ -66,49 +70,50 @@
       </div>
       <div class="layanan-grid">
 
-        <div class="layanan-card">
-          <div class="layanan-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+        <article class="layanan-card" tabindex="0" role="button" data-service="domisili">
+          <div class="layanan-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-5h6v5"/><path d="M9 9h.01M15 9h.01M9 12h.01M15 12h.01"/></svg></div>
           <h3>Surat Keterangan Domisili</h3>
-          <p>Pelayanan penerbitan surat keterangan tempat tinggal warga desa.</p>
-          <div class="layanan-more">Selengkapnya <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
-        </div>
+          <p>Persyaratan yang perlu dibawa ke Balai Desa untuk pengurusan surat domisili.</p>
+          <div class="layanan-more">Lihat Persyaratan <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
+        </article>
 
-        <div class="layanan-card">
-          <div class="layanan-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <article class="layanan-card" tabindex="0" role="button" data-service="ktpkk">
+          <div class="layanan-icon"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><circle cx="9" cy="10" r="2.5"/><path d="M6.5 16c.7-1.7 4.3-1.7 5 0M14 9h3M14 12h3M14 15h2"/></svg></div>
           <h3>Surat Pengantar KTP / KK</h3>
-          <p>Pengantar pembuatan atau perubahan KTP dan Kartu Keluarga.</p>
-          <div class="layanan-more">Selengkapnya <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
-        </div>
+          <p>Persyaratan untuk pengantar pembuatan, perubahan, atau pengurusan KTP dan KK.</p>
+          <div class="layanan-more">Lihat Persyaratan <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
+        </article>
 
-        <div class="layanan-card">
-          <div class="layanan-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+        <article class="layanan-card" tabindex="0" role="button" data-service="sktm">
+          <div class="layanan-icon"><svg viewBox="0 0 24 24"><path d="M12 3l9 4.5v6c0 4.8-3.4 7.2-9 8.5-5.6-1.3-9-3.7-9-8.5v-6L12 3z"/><path d="M12 8v5M12 16h.01"/></svg></div>
           <h3>Surat Keterangan Tidak Mampu</h3>
-          <p>Dokumen SKTM untuk keperluan pendidikan, kesehatan, dan sosial.</p>
-          <div class="layanan-more">Selengkapnya <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
-        </div>
+          <p>Persyaratan pengurusan SKTM untuk keperluan pendidikan, kesehatan, atau sosial.</p>
+          <div class="layanan-more">Lihat Persyaratan <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
+        </article>
 
-        <div class="layanan-card">
-          <div class="layanan-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <article class="layanan-card" tabindex="0" role="button" data-service="usaha">
+          <div class="layanan-icon"><svg viewBox="0 0 24 24"><path d="M4 10h16v10H4z"/><path d="M3 10l2-5h14l2 5"/><path d="M8 10v3M16 10v3M8 20v-5h8v5"/></svg></div>
           <h3>Surat Keterangan Usaha</h3>
-          <p>Legalitas usaha kecil dan menengah bagi pelaku UMKM desa.</p>
-          <div class="layanan-more">Selengkapnya <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
-        </div>
+          <p>Persyaratan bagi warga yang membutuhkan surat keterangan usaha dari desa.</p>
+          <div class="layanan-more">Lihat Persyaratan <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
+        </article>
 
-        <div class="layanan-card">
-          <div class="layanan-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+        <article class="layanan-card" tabindex="0" role="button" data-service="waris">
+          <div class="layanan-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 21v-2a5 5 0 0 1 10 0v2M14 21v-1.5a4 4 0 0 1 7 0V21"/></svg></div>
           <h3>Surat Keterangan Waris</h3>
-          <p>Penerbitan surat keterangan hak waris atas kepemilikan aset.</p>
-          <div class="layanan-more">Selengkapnya <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
-        </div>
+          <p>Persyaratan umum yang perlu disiapkan untuk pengurusan surat keterangan waris.</p>
+          <div class="layanan-more">Lihat Persyaratan <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
+        </article>
 
-        <div class="layanan-card">
-          <div class="layanan-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <article class="layanan-card" tabindex="0" role="button" data-service="rekomendasi">
+          <div class="layanan-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/><path d="M16 16l2 2 3-4"/></svg></div>
           <h3>Surat Rekomendasi</h3>
-          <p>Surat rekomendasi untuk berbagai keperluan administrasi warga.</p>
-          <div class="layanan-more">Selengkapnya <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
-        </div>
+          <p>Persyaratan umum untuk pengurusan surat rekomendasi sesuai keperluan warga.</p>
+          <div class="layanan-more">Lihat Persyaratan <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
+        </article>
 
       </div>
+
       <div class="layanan-info">
         <div class="layanan-info-box">
           <strong>Jam Pelayanan:</strong> Senin – Jumat, pukul 08.00 – 14.00 WIB
@@ -119,35 +124,19 @@
     </div>
   </section>
 
-   <!-- Form -->
-        <div class="form-card">
-          <h3>Kirim Pesan</h3>
-          <form onsubmit="handleForm(event)">
-            <div class="form-row">
-              <div class="form-group">
-                <label>Nama</label>
-                <input type="text" placeholder="Nama lengkap" required />
-              </div>
-              <div class="form-group">
-                <label>No. HP</label>
-                <input type="tel" placeholder="08xx xxxx xxxx" />
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Email</label>
-              <input type="email" placeholder="email@contoh.com" />
-            </div>
-            <div class="form-group">
-              <label>Perihal</label>
-              <input type="text" placeholder="Subjek pesan" required />
-            </div>
-            <div class="form-group">
-              <label>Pesan</label>
-              <textarea rows="4" placeholder="Tulis pesan atau pertanyaan Anda..." required></textarea>
-            </div>
-            <button type="submit" class="btn-submit">Kirim Pesan</button>
-          </form>
+  <!-- ═══ PENGADUAN MASYARAKAT CTA ═══ -->
+  <section class="pengaduan-cta">
+    <div class="container">
+      <div class="pengaduan-cta-card">
+        <div class="pengaduan-cta-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9.2 9.2 0 0 1-4.1-.9L3 21l1.9-4.2A8.3 8.3 0 0 1 3 11.5 8.5 8.5 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/><path d="M8 12h.01M12 12h.01M16 12h.01"/></svg>
         </div>
+        <div class="pengaduan-cta-content">
+          <span class="pengaduan-kicker">Aspirasi Warga</span>
+          <h2>Pengaduan Masyarakat</h2>
+          <p>Sampaikan pengaduan, saran, atau aspirasi terkait pelayanan dan kondisi Desa Buah Berak melalui formulir yang telah disediakan.</p>
+        </div>
+        <a class="btn-pengaduan" href="pengaduan.html">Buka Halaman Pengaduan <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
       </div>
     </div>
   </section>
@@ -200,6 +189,7 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/layanan.js"></script>
 
 </body>
 </html>

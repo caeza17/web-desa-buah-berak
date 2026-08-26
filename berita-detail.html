@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Berita — Desa Buah Berak</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container inner">
+      <div class="logo-area">
+        <img src="img/LogoDesaBuahBerak.png" alt="Logo Desa Buah Berak" />
+        <div class="logo-text">
+          <div class="kecamatan">Pemerintah Desa</div>
+          <div class="desa-name">BUAH BERAK</div>
+          <div class="sub">Kec. Kalianda &middot; Kab. Lampung Selatan</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html#beranda">Beranda</a>
+        <a href="profil.html">Profil Desa</a>
+        <a href="pemerintahan.html">Pemerintahan</a>
+        <a href="berita.html" class="active">Berita</a>
+        <a href="umkm.html">UMKM</a>
+        <a href="wisata.html">Wisata</a>
+        <a href="layanan.html">Layanan</a>
+        <a href="pengaduan.html">Pengaduan</a>
+        <a href="index.html#kontak">Kontak</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html#beranda" onclick="closeMobileNav()">Beranda</a>
+      <a href="profil.html" onclick="closeMobileNav()">Profil Desa</a>
+      <a href="pemerintahan.html" onclick="closeMobileNav()">Pemerintahan</a>
+      <a href="berita.html" onclick="closeMobileNav()">Berita</a>
+      <a href="umkm.html" onclick="closeMobileNav()">UMKM</a>
+      <a href="wisata.html" onclick="closeMobileNav()">Wisata</a>
+      <a href="layanan.html" onclick="closeMobileNav()">Layanan</a>
+      <a href="pengaduan.html" onclick="closeMobileNav()">Pengaduan</a>
+      <a href="index.html#kontak" onclick="closeMobileNav()">Kontak</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="berita-detail-hero">
+      <div class="container">
+        <a class="berita-detail-back" href="berita.html">
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+          Kembali ke Berita
+        </a>
+      </div>
+    </section>
+
+    <section class="berita-detail-section">
+      <div class="container">
+        <article class="berita-detail-card">
+          <div class="berita-detail-image-wrap">
+            <img id="detailImage" src="" alt="" class="berita-detail-image" />
+            <span id="detailCategory" class="berita-detail-badge"></span>
+          </div>
+
+          <div class="berita-detail-content">
+            <div class="berita-detail-meta">
+              <span id="detailDate"></span>
+            </div>
+            <h1 id="detailTitle"></h1>
+            <div id="detailBody" class="berita-detail-body"></div>
+
+            <div class="berita-detail-footer">
+              <a href="berita.html" class="btn-detail-secondary">
+                <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+                Berita Lainnya
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="img/LogoDesaBuahBerak.png" alt="Logo Desa Buah Berak" />
+            <div>
+              <div class="footer-brand-name">Desa Buah Berak</div>
+              <div class="footer-brand-sub">Website Resmi Pemerintah Desa</div>
+            </div>
+          </div>
+          <p class="footer-desc">Melayani masyarakat dengan sepenuh hati demi terwujudnya Desa Buah Berak yang mandiri, sejahtera, dan berbudaya.</p>
+        </div>
+
+        <div>
+          <div class="footer-heading">Tautan Cepat</div>
+          <ul class="footer-links">
+            <li><a href="index.html#beranda">Beranda</a></li>
+            <li><a href="profil.html">Profil Desa</a></li>
+            <li><a href="pemerintahan.html">Pemerintahan</a></li>
+            <li><a href="berita.html">Berita</a></li>
+            <li><a href="layanan.html">Layanan</a></li>
+            <li><a href="pengaduan.html">Pengaduan</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Tautan Terkait</div>
+          <ul class="footer-links">
+            <li><a href="#">Kab. Lampung Selatan</a></li>
+            <li><a href="#">Kec. Kalianda</a></li>
+            <li><a href="#">Disdukcapil</a></li>
+            <li><a href="#">BPJS Kesehatan</a></li>
+            <li><a href="#">Puskesmas Kalianda</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Pemerintah Desa Buah Berak. Hak Cipta Dilindungi.</span>
+        <span>Dikelola oleh Tim IT Desa Buah Berak</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/berita.js"></script>
+</body>
+</html>
